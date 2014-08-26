@@ -10206,7 +10206,7 @@ button.close {
 @media (max-width: 767px) {
   /* line 9, scss/partials/_primary.scss */
   .ucf {
-    background-size: 280px;
+    background-size: 250px;
     margin-top: 15px;
     position: absolute;
     top: 0;
