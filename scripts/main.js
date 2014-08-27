@@ -163,26 +163,33 @@ require(['modernizr'], function ()
                 $('#page').fullpage({
 				    'verticalCentered': false,
 				    'resize': false,
-                    'anchors':[],
+                    'anchors':['home', 'one', 'two'],
                     'navigation': false,
                     'slidesNavigation': true,
                     'loopHorizontal': false,
-                    'autoScrolling': true
+                    'autoScrolling': false
 			    });
                 
                 // Lazyload website images
                 $('.img-responsive').bttrlazyloading({
                     //placeholder: 'data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==',
                     backgroundcolor: 'transparent',
-                    animation: 'fadeIn',
-                    container: '.scroll-pane'
+                    animation: 'fadeIn'
                 });
                 
-                $("#tabs").tabs();
+                // Easing to anchors
+                $('a[href^="#"]').bind('click.smoothscroll', function (event) {
+                    event.preventDefault();
+                    var target = this.hash;
+                    $target = $(target);
+                    $('html, body').stop().animate({ 'scrollTop': $target.offset().top }, 700, 'swing', function () {
+                        window.location.hash = target;
+                    });
+                });
                 
                 //YouTube Player Settings
-                //var tag = document.createElement('script'); tag.src = "https://www.youtube.com/player_api"; var firstScriptTag = document.getElementsByTagName('script')[0]; firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-                //$('#playerA').click(function () { var player; player = new YT.Player('playerA', { height: '300', width: '320', videoId: 'sibcnHOLPec', playerVars: { 'autoplay': 1, 'playsinline': 1, 'showinfo': 0, 'controls': 1, 'enablejsapi': 1, 'modestbranding': 1, 'color': 'white', 'iv_load_policy': 3, 'rel': 0, 'theme': 'light'} }); });
+                var tag = document.createElement('script'); tag.src = "https://www.youtube.com/player_api"; var firstScriptTag = document.getElementsByTagName('script')[0]; firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+                $('#playerA').click(function () { var player; player = new YT.Player('playerA', { height: '280', width: '420', videoId: 'sibcnHOLPec', playerVars: { 'autoplay': 1, 'playsinline': 1, 'showinfo': 0, 'controls': 1, 'enablejsapi': 1, 'modestbranding': 1, 'color': 'white', 'iv_load_policy': 3, 'rel': 0, 'theme': 'light'} }); });
                 
                 if (screenwidth < 1000) // load only tablet scripts
                 {
@@ -201,7 +208,7 @@ require(['modernizr'], function ()
                 
                 if (screenwidth >= 1000) // load only desktop scripts
                 {
-                    require(['easing'], function ()
+                    require([], function ()
                     {
                         //code
 
