@@ -1,0 +1,41 @@
+// All Screens
+
+.controlArrow {
+    border-width: 0;
+    border-color: transparent;
+    width: 0;
+    height: 0;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    
+    opacity: 0.65;
+    filter: Alpha(opacity=65);  /*IE8 and earlier */
+
+    &:hover {
+        opacity: 1;
+        filter: Alpha(opacity=100);  /*IE8 and earlier */
+    }
+    
+    i {
+        font-size: 2.3em;
+    }
+}
+.controlArrow.prev {
+    left: 0;
+    border-width: 0;
+    border-color: transparent;
+    text-align: left;
+    //border: 1px dashed red;
+    
+    padding: 1em 3em 3em 1em;
+}
+.controlArrow.next {
+    right: 0;
+    border-width: 0;
+    border-color: transparent;
+    text-align: right;
+    //border: 1px dashed red;
+    
+    padding: 1em 2.6em 3em 1.3em;
+}
