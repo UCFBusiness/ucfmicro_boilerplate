@@ -177,7 +177,7 @@ h1.head-title {
 .navbar {
   background-color: transparent;
   background: rgba(255, 255, 255, 0.96);
-  box-shadow: 0 2px 12px #555;
+  box-shadow: 0 2px 12px rgba(150, 150, 150, 0.7);
 }
 
 /* line 13, ../scss/partials/_nav.scss */
@@ -473,27 +473,29 @@ Fullpage JS
   position: relative;
 }
 
-/*.fp-controlArrow {
-    position: absolute;
-    z-index: 4;
-    top: 50%;
-    cursor: pointer;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    margin-top: -38px;
+/* line 54, ../scss/modules/fullpage/_base.scss */
+.fp-controlArrow {
+  position: absolute;
+  z-index: 4;
+  top: 50%;
+  cursor: pointer;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  margin-top: -38px;
 }
+
+/* line 64, ../scss/modules/fullpage/_base.scss */
 .fp-controlArrow.fp-prev {
-    left: 15px;
-    width: 0;
-    border-width: 38.5px 34px 38.5px 0;
-    border-color: transparent #fff transparent transparent;
+  left: 15px;
+  width: 0;
 }
+
+/* line 70, ../scss/modules/fullpage/_base.scss */
 .fp-controlArrow.fp-next {
-    right: 15px;
-    border-width: 38.5px 0 38.5px 34px;
-    border-color: transparent transparent transparent #fff;
-}*/
+  right: 15px;
+}
+
 /* line 75, ../scss/modules/fullpage/_base.scss */
 .fp-scrollable {
   overflow: scroll;
@@ -622,26 +624,26 @@ Fullpage JS
 background: rgba(255,255,255,.3); //- white
 */
 /* line 7, ../scss/modules/fullpage/_section.scss */
-.section {
+.fp-section {
   margin: 0;
   padding: 0;
 }
 /* line 12, ../scss/modules/fullpage/_section.scss */
-.section:nth-child(2n+1) {
+.fp-section:nth-child(2n+1) {
   background: rgba(255, 255, 255, 0.2);
   color: #555;
   /* IE8 proofing */
   color: rgba(51, 51, 51, 0.5);
 }
 /* line 18, ../scss/modules/fullpage/_section.scss */
-.section:nth-child(2n) {
+.fp-section:nth-child(2n) {
   background: rgba(0, 0, 0, 0.7);
   color: #fff;
   /* IE8 proofing */
   color: rgba(255, 255, 255, 0.75);
 }
 /* line 31, ../scss/modules/fullpage/_section.scss */
-.section .sectionsNav {
+.fp-section .sectionsNav {
   padding: .1em;
   position: absolute;
   bottom: 8%;
@@ -650,45 +652,45 @@ background: rgba(255,255,255,.3); //- white
 }
 @media (max-width: 999px) {
   /* line 31, ../scss/modules/fullpage/_section.scss */
-  .section .sectionsNav {
+  .fp-section .sectionsNav {
     bottom: 3%;
     left: 47%;
   }
 }
 @media (max-width: 699px) and (orientation: landscape) {
   /* line 31, ../scss/modules/fullpage/_section.scss */
-  .section .sectionsNav {
+  .fp-section .sectionsNav {
     bottom: 3%;
     left: 46%;
   }
 }
 @media (max-width: 499px) and (orientation: portrait) {
   /* line 31, ../scss/modules/fullpage/_section.scss */
-  .section .sectionsNav {
+  .fp-section .sectionsNav {
     bottom: 3%;
     left: 43%;
   }
 }
 /* line 60, ../scss/modules/fullpage/_section.scss */
-.section .sectionsNav.go {
+.fp-section .sectionsNav.go {
   text-align: center;
   text-decoration: none;
 }
 /* line 65, ../scss/modules/fullpage/_section.scss */
-.section .sectionsNav.go:before, .section .sectionsNav#goNext:before, .section .sectionsNav#goTop:before {
+.fp-section .sectionsNav.go:before, .fp-section .sectionsNav#goNext:before, .fp-section .sectionsNav#goTop:before {
   display: block;
   font-size: 0.7em;
 }
 /* line 72, ../scss/modules/fullpage/_section.scss */
-.section .sectionsNav#goNext:before {
+.fp-section .sectionsNav#goNext:before {
   content: "Scroll for More";
 }
 /* line 79, ../scss/modules/fullpage/_section.scss */
-.section .sectionsNav#goTop:before {
+.fp-section .sectionsNav#goTop:before {
   content: "Back to Top";
 }
 /* line 85, ../scss/modules/fullpage/_section.scss */
-.section .sectionsNav .fa-chevron-down {
+.fp-section .sectionsNav .fa-chevron-down {
   font-size: 2.8em;
 }
 
@@ -700,7 +702,7 @@ background: rgba(255,255,255,.3); //- white
 }
 
 /* line 3, ../scss/modules/fullpage/_slide.scss */
-.controlArrow {
+.fp-controlArrow {
   border-width: 0;
   border-color: transparent;
   width: 0;
@@ -713,18 +715,18 @@ background: rgba(255,255,255,.3); //- white
   /*IE8 and earlier */
 }
 /* line 15, ../scss/modules/fullpage/_slide.scss */
-.controlArrow:hover {
+.fp-controlArrow:hover {
   opacity: 1;
   filter: Alpha(opacity=100);
   /*IE8 and earlier */
 }
 /* line 20, ../scss/modules/fullpage/_slide.scss */
-.controlArrow i {
+.fp-controlArrow i {
   font-size: 2.3em;
 }
 
 /* line 24, ../scss/modules/fullpage/_slide.scss */
-.controlArrow.prev {
+.fp-controlArrow.fp-prev {
   left: 0;
   border-width: 0;
   border-color: transparent;
@@ -733,7 +735,7 @@ background: rgba(255,255,255,.3); //- white
 }
 
 /* line 33, ../scss/modules/fullpage/_slide.scss */
-.controlArrow.next {
+.fp-controlArrow.fp-next {
   right: 0;
   border-width: 0;
   border-color: transparent;

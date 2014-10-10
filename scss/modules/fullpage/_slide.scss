@@ -1,6 +1,6 @@
 // All Screens
 
-.controlArrow {
+.fp-controlArrow {
     border-width: 0;
     border-color: transparent;
     width: 0;
@@ -21,7 +21,7 @@
         font-size: 2.3em;
     }
 }
-.controlArrow.prev {
+.fp-controlArrow.fp-prev {
     left: 0;
     border-width: 0;
     border-color: transparent;
@@ -30,7 +30,7 @@
     
     padding: 1em 3em 3em 1em;
 }
-.controlArrow.next {
+.fp-controlArrow.fp-next {
     right: 0;
     border-width: 0;
     border-color: transparent;
