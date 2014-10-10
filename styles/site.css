@@ -177,6 +177,7 @@ h1.head-title {
 .navbar {
   background-color: transparent;
   background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 2px 12px #555;
 }
 
 /* line 13, ../scss/partials/_nav.scss */
@@ -404,85 +405,109 @@ ul.navbar-nav > li.active > a:hover, ul.navbar-nav > li.active > a:focus {
 Fullpage JS
 -------------------------------------*/
 /**
-* fullPage 1.6.6
-* https://github.com/alvarotrigo/fullPage.js
-* MIT licensed
-*
-* Copyright (C) 2013 alvarotrigo.com - A project by Alvaro Trigo
-*/
+ * fullPage 2.1.9
+ * https://github.com/alvarotrigo/fullPage.js
+ * MIT licensed
+ *
+ * Copyright (C) 2013 alvarotrigo.com - A project by Alvaro Trigo
+ */
 /* line 9, ../scss/modules/fullpage/_base.scss */
 #superContainer {
   height: 100%;
   position: relative;
   /* Touch detection for Windows 8 */
   -ms-touch-action: none;
+  /* IE 11 on Windows Phone 8.1*/
+  touch-action: none;
 }
 
-/* line 16, ../scss/modules/fullpage/_base.scss */
-.section {
+/* line 19, ../scss/modules/fullpage/_base.scss */
+.fp-section {
   position: relative;
   -webkit-box-sizing: border-box;
+  /* Safari<=5 Android<=3 */
   -moz-box-sizing: border-box;
+  /* <=28 */
   box-sizing: border-box;
 }
 
-/* line 22, ../scss/modules/fullpage/_base.scss */
-.slide {
+/* line 25, ../scss/modules/fullpage/_base.scss */
+.fp-slide {
   float: left;
 }
 
-/* line 25, ../scss/modules/fullpage/_base.scss */
-.slide, .slidesContainer {
+/* line 28, ../scss/modules/fullpage/_base.scss */
+.fp-slide, .fp-slidesContainer {
   height: 100%;
   display: block;
 }
 
-/* line 29, ../scss/modules/fullpage/_base.scss */
-.slides {
+/* line 32, ../scss/modules/fullpage/_base.scss */
+.fp-slides {
+  z-index: 1;
   height: 100%;
   overflow: hidden;
   position: relative;
   -webkit-transition: all 0.3s ease-out;
-  -moz-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
+  /* Safari<=6 Android<=4.3 */
   transition: all 0.3s ease-out;
 }
 
-/* line 38, ../scss/modules/fullpage/_base.scss */
-.section.table, .slide.table {
+/* line 40, ../scss/modules/fullpage/_base.scss */
+.fp-section.fp-table, .fp-slide.fp-table {
   display: table;
   width: 100%;
 }
 
-/* line 42, ../scss/modules/fullpage/_base.scss */
-.tableCell {
+/* line 44, ../scss/modules/fullpage/_base.scss */
+.fp-tableCell {
   display: table-cell;
   vertical-align: middle;
   width: 100%;
   height: 100%;
 }
 
-/* line 48, ../scss/modules/fullpage/_base.scss */
-.slidesContainer {
+/* line 50, ../scss/modules/fullpage/_base.scss */
+.fp-slidesContainer {
   float: left;
   position: relative;
 }
 
-/* line 53, ../scss/modules/fullpage/_base.scss */
-.scrollable {
+/*.fp-controlArrow {
+    position: absolute;
+    z-index: 4;
+    top: 50%;
+    cursor: pointer;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    margin-top: -38px;
+}
+.fp-controlArrow.fp-prev {
+    left: 15px;
+    width: 0;
+    border-width: 38.5px 34px 38.5px 0;
+    border-color: transparent #fff transparent transparent;
+}
+.fp-controlArrow.fp-next {
+    right: 15px;
+    border-width: 38.5px 0 38.5px 34px;
+    border-color: transparent transparent transparent #fff;
+}*/
+/* line 75, ../scss/modules/fullpage/_base.scss */
+.fp-scrollable {
   overflow: scroll;
 }
 
-/* line 56, ../scss/modules/fullpage/_base.scss */
-.easing {
+/* line 78, ../scss/modules/fullpage/_base.scss */
+.fp-easing {
   -webkit-transition: all 0.7s ease-out;
-  -moz-transition: all 0.7s ease-out;
-  -o-transition: all 0.7s ease-out;
+  /* Safari<=6 Android<=4.3 */
   transition: all 0.7s ease-out;
 }
 
-/* line 63, ../scss/modules/fullpage/_base.scss */
-#fullPage-nav {
+/* line 82, ../scss/modules/fullpage/_base.scss */
+#fp-nav {
   position: fixed;
   z-index: 100;
   margin-top: -32px;
@@ -490,44 +515,44 @@ Fullpage JS
   opacity: 1;
 }
 
-/* line 70, ../scss/modules/fullpage/_base.scss */
-#fullPage-nav.right {
+/* line 89, ../scss/modules/fullpage/_base.scss */
+#fp-nav.right {
   right: 17px;
 }
 
-/* line 73, ../scss/modules/fullpage/_base.scss */
-#fullPage-nav.left {
+/* line 92, ../scss/modules/fullpage/_base.scss */
+#fp-nav.left {
   left: 17px;
 }
 
-/* line 76, ../scss/modules/fullpage/_base.scss */
-.fullPage-slidesNav {
+/* line 95, ../scss/modules/fullpage/_base.scss */
+.fp-slidesNav {
   position: absolute;
   z-index: 4;
   left: 50%;
   opacity: 1;
 }
 
-/* line 82, ../scss/modules/fullpage/_base.scss */
-.fullPage-slidesNav.bottom {
+/* line 101, ../scss/modules/fullpage/_base.scss */
+.fp-slidesNav.bottom {
   bottom: 17px;
 }
 
-/* line 85, ../scss/modules/fullpage/_base.scss */
-.fullPage-slidesNav.top {
+/* line 104, ../scss/modules/fullpage/_base.scss */
+.fp-slidesNav.top {
   top: 17px;
 }
 
-/* line 89, ../scss/modules/fullpage/_base.scss */
-#fullPage-nav ul,
-.fullPage-slidesNav ul {
+/* line 108, ../scss/modules/fullpage/_base.scss */
+#fp-nav ul,
+.fp-slidesNav ul {
   margin: 0;
   padding: 0;
 }
 
-/* line 94, ../scss/modules/fullpage/_base.scss */
-#fullPage-nav li,
-.fullPage-slidesNav li {
+/* line 113, ../scss/modules/fullpage/_base.scss */
+#fp-nav li,
+.fp-slidesNav li {
   display: block;
   width: 14px;
   height: 13px;
@@ -535,14 +560,14 @@ Fullpage JS
   position: relative;
 }
 
-/* line 101, ../scss/modules/fullpage/_base.scss */
-.fullPage-slidesNav li {
+/* line 120, ../scss/modules/fullpage/_base.scss */
+.fp-slidesNav li {
   display: inline-block;
 }
 
-/* line 105, ../scss/modules/fullpage/_base.scss */
-#fullPage-nav li a,
-.fullPage-slidesNav li a {
+/* line 124, ../scss/modules/fullpage/_base.scss */
+#fp-nav li a,
+.fp-slidesNav li a {
   display: block;
   position: relative;
   z-index: 1;
@@ -552,44 +577,44 @@ Fullpage JS
   text-decoration: none;
 }
 
-/* line 115, ../scss/modules/fullpage/_base.scss */
-#fullPage-nav li .active span,
-.fullPage-slidesNav .active span {
+/* line 134, ../scss/modules/fullpage/_base.scss */
+#fp-nav li .active span,
+.fp-slidesNav .active span {
   background: #333;
 }
 
-/* line 119, ../scss/modules/fullpage/_base.scss */
-#fullPage-nav span,
-.fullPage-slidesNav span {
+/* line 138, ../scss/modules/fullpage/_base.scss */
+#fp-nav span,
+.fp-slidesNav span {
   top: 2px;
   left: 2px;
   width: 8px;
   height: 8px;
   border: 1px solid #000;
   background: rgba(0, 0, 0, 0);
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
   border-radius: 50%;
   position: absolute;
   z-index: 1;
 }
 
-/* line 132, ../scss/modules/fullpage/_base.scss */
-.fullPage-tooltip {
+/* line 149, ../scss/modules/fullpage/_base.scss */
+.fp-tooltip {
   position: absolute;
+  top: -2px;
   color: #fff;
   font-size: 14px;
   font-family: arial, helvetica, sans-serif;
-  top: -2px;
+  white-space: nowrap;
+  max-width: 220px;
 }
 
-/* line 139, ../scss/modules/fullpage/_base.scss */
-.fullPage-tooltip.right {
+/* line 158, ../scss/modules/fullpage/_base.scss */
+.fp-tooltip.right {
   right: 20px;
 }
 
-/* line 142, ../scss/modules/fullpage/_base.scss */
-.fullPage-tooltip.left {
+/* line 161, ../scss/modules/fullpage/_base.scss */
+.fp-tooltip.left {
   left: 20px;
 }
 
