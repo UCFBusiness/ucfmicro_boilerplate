@@ -710,7 +710,7 @@ background: rgba(255,255,255,.3); //- white
   cursor: pointer;
   position: absolute;
   top: 50%;
-  opacity: 0.65;
+  opacity: 0.35;
   filter: Alpha(opacity=65);
   /*IE8 and earlier */
 }
@@ -727,18 +727,26 @@ background: rgba(255,255,255,.3); //- white
 
 /* line 24, ../scss/modules/fullpage/_slide.scss */
 .fp-controlArrow.fp-prev {
-  left: 0;
+  background-color: rgba(33, 33, 33, 0.1);
+  padding: 1em 3em 3em 1em;
   border-width: 0;
   border-color: transparent;
+  border-radius: 0 2em 2em 0;
+  border-bottom: 1px solid #aaa;
   text-align: left;
-  padding: 1em 3em 3em 1em;
+  left: 0;
+  z-index: 99;
 }
 
-/* line 33, ../scss/modules/fullpage/_slide.scss */
+/* line 38, ../scss/modules/fullpage/_slide.scss */
 .fp-controlArrow.fp-next {
-  right: 0;
+  background-color: rgba(33, 33, 33, 0.1);
+  padding: 1em 2.6em 3em 1.3em;
   border-width: 0;
   border-color: transparent;
+  border-radius: 2em 0 0 2em;
+  border-bottom: 1px solid #aaa;
   text-align: right;
-  padding: 1em 2.6em 3em 1.3em;
+  right: 0;
+  z-index: 99;
 }
