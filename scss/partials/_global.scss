@@ -1,5 +1,12 @@
 @charset "utf-8";
 @import url(http://fonts.googleapis.com/css?family=Sail|Cookie|Arvo);
+@import url(http://fonts.googleapis.com/css?family=Bubblegum+Sans);
+@import url(http://fonts.googleapis.com/css?family=Permanent+Marker);
+@import url(http://fonts.googleapis.com/css?family=Gloria+Hallelujah);
+@import url(http://fonts.googleapis.com/css?family=Indie+Flower);
+@import url(http://fonts.googleapis.com/css?family=Architects+Daughter);
+@import url(http://fonts.googleapis.com/css?family=Rock+Salt);
+@import url(http://fonts.googleapis.com/css?family=Shadows+Into+Light+Two);
 
 // --------------------------------------------------
 // Primary Styles (above the fold elements only)
@@ -29,15 +36,14 @@ html {
 body {
     @extend html;
     
-    padding-top: 50px;
-    //min-height: 2000px;
+    //padding-top: 50px;
     
     /*Avoid flicker on slides transitions for mobile phones #336 */
     -webkit-tap-highlight-color: rgba(0,0,0,0);
     
     /* Headers*/
     h1, h2, h3, h4, h5 {
-        font-family: 'Cookie', sans-serif;
+        font-family: 'Arvo', sans-serif;
 	    letter-spacing: 1px;
 	    font-weight: 400;
         line-height: 1em;

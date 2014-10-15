@@ -31,12 +31,17 @@
 
 .copyright {
     padding: 5px;
-    font-size: 0.6em;
-    color: #ddd;
+    font-size: 0.63em;
+    color: #aaa;
     position: fixed;
     bottom: 0;
     left: 0;
     z-index: 100;
+    
+    // Tablet //
+    @media (min-width: 768px) {
+        font-size: 0.93em;
+    }
 }
 
 .img-center {

@@ -9,31 +9,26 @@ background: rgba(255,255,255,.3); //- white
     margin: 0;
     padding: 0;
 
-    &:nth-child(2n+1) { // odds
+    &:nth-child(2n+1) { // odd number sections
         background: rgba(255, 255, 255, 0.2);
         color: #555; /* IE8 proofing */
         color: rgba(51,51,51,.5);
     }
 
-    &:nth-child(2n) { // evens
-        background: rgba(0, 0, 0, 0.7);
+    &:nth-child(2n) { // even number sections
+        background: rgba(0, 0, 0, 0.2);
         color: #fff; /* IE8 proofing */
         color: rgba(255,255,255,.75);
     }
 
     &:nth-child(1) { // first section
-        //css
         //background-image: url(/images/bg-lg1.jpg);
         //background-repeat: no-repeat;
         //background-size: cover;
     }
 
     .sectionsNav {
-        //background: rgba(255,204,0,0.3); //- yellow
-        //border: 2px solid #ffcc00;
-        //border-radius: 35px;
         padding: .1em;
-
         position: absolute;
         bottom: 8%;
         left: 48%;
@@ -71,14 +66,14 @@ background: rgba(255,255,255,.3); //- white
         &#goNext {
             &:before {
                 @extend .go:before;
-                content:"Scroll for More";
+                content:"Learn More";
             } 
         }
 
         &#goTop {
             &:before {
                 @extend .go:before;
-                content:"Back to Top";
+                content:"Top";
             } 
         }
 

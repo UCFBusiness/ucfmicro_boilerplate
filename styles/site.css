@@ -1,34 +1,40 @@
 @charset "utf-8";
 @import url(http://fonts.googleapis.com/css?family=Sail|Cookie|Arvo);
+@import url(http://fonts.googleapis.com/css?family=Bubblegum+Sans);
+@import url(http://fonts.googleapis.com/css?family=Permanent+Marker);
+@import url(http://fonts.googleapis.com/css?family=Gloria+Hallelujah);
+@import url(http://fonts.googleapis.com/css?family=Indie+Flower);
+@import url(http://fonts.googleapis.com/css?family=Architects+Daughter);
+@import url(http://fonts.googleapis.com/css?family=Rock+Salt);
+@import url(http://fonts.googleapis.com/css?family=Shadows+Into+Light+Two);
 /*-------------------------------------
 Social
 -------------------------------------*/
-/* line 8, ../scss/partials/_global.scss */
+/* line 15, ../scss/partials/_global.scss */
 html, body {
   height: 100%;
   position: relative;
 }
 
-/* line 19, ../scss/partials/_global.scss */
+/* line 26, ../scss/partials/_global.scss */
 .no-js body {
   overflow: auto;
 }
-/* line 23, ../scss/partials/_global.scss */
+/* line 30, ../scss/partials/_global.scss */
 .no-js .page {
   width: 100%;
   height: 100%;
 }
 
-/* line 29, ../scss/partials/_global.scss */
+/* line 36, ../scss/partials/_global.scss */
 body {
-  padding-top: 50px;
   /*Avoid flicker on slides transitions for mobile phones #336 */
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   /* Headers*/
 }
-/* line 39, ../scss/partials/_global.scss */
+/* line 45, ../scss/partials/_global.scss */
 body h1, body h2, body h3, body h4, body h5 {
-  font-family: 'Cookie', sans-serif;
+  font-family: 'Arvo', sans-serif;
   letter-spacing: 1px;
   font-weight: 400;
   line-height: 1em;
@@ -85,15 +91,21 @@ a { //suppressing the -webkit-tap-highlight-color
 /* line 32, ../scss/partials/_primary.scss */
 .copyright {
   padding: 5px;
-  font-size: 0.6em;
-  color: #ddd;
+  font-size: 0.63em;
+  color: #aaa;
   position: fixed;
   bottom: 0;
   left: 0;
   z-index: 100;
 }
+@media (min-width: 768px) {
+  /* line 32, ../scss/partials/_primary.scss */
+  .copyright {
+    font-size: 0.93em;
+  }
+}
 
-/* line 42, ../scss/partials/_primary.scss */
+/* line 47, ../scss/partials/_primary.scss */
 .img-center {
   margin: 0 auto;
   max-width: 300px;
@@ -103,7 +115,7 @@ a { //suppressing the -webkit-tap-highlight-color
  * Base structure
  */
 /* Extra markup and styles for table-esque vertical and horizontal centering */
-/* line 52, ../scss/partials/_primary.scss */
+/* line 57, ../scss/partials/_primary.scss */
 .site-wrapper {
   display: table;
   width: 100%;
@@ -114,7 +126,7 @@ a { //suppressing the -webkit-tap-highlight-color
   box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.5);
 }
 
-/* line 60, ../scss/partials/_primary.scss */
+/* line 65, ../scss/partials/_primary.scss */
 .section-wrapper {
   display: table;
   width: 100%;
@@ -123,13 +135,13 @@ a { //suppressing the -webkit-tap-highlight-color
   min-height: 100%;
 }
 
-/* line 66, ../scss/partials/_primary.scss */
+/* line 71, ../scss/partials/_primary.scss */
 .site-wrapper-inner, .section-wrapper-inner {
   display: table-cell;
   vertical-align: middle;
 }
 @media (min-width: 768px) {
-  /* line 66, ../scss/partials/_primary.scss */
+  /* line 71, ../scss/partials/_primary.scss */
   .site-wrapper-inner, .section-wrapper-inner {
     vertical-align: middle;
     /* Start the vertical centering */
@@ -137,7 +149,7 @@ a { //suppressing the -webkit-tap-highlight-color
 }
 
 /* Padding for spacing */
-/* line 77, ../scss/partials/_primary.scss */
+/* line 82, ../scss/partials/_primary.scss */
 .inner {
   padding: 1em 30px;
 }
@@ -145,7 +157,7 @@ a { //suppressing the -webkit-tap-highlight-color
 /*
  * Page
  */
-/* line 87, ../scss/partials/_primary.scss */
+/* line 92, ../scss/partials/_primary.scss */
 h1.head-title {
   font-size: 4em;
 }
@@ -153,13 +165,13 @@ h1.head-title {
 /*
  * Custom button
  */
-/* line 95, ../scss/partials/_primary.scss */
+/* line 100, ../scss/partials/_primary.scss */
 .btn-lg {
   padding: 10px 20px;
   font-weight: bold;
 }
 
-/* line 102, ../scss/partials/_primary.scss */
+/* line 107, ../scss/partials/_primary.scss */
 .btn-default,
 .btn-default:hover,
 .btn-default:focus {
@@ -184,10 +196,6 @@ h1.head-title {
 ul.navbar-nav {
   background-color: transparent;
 }
-/* line 19, ../scss/partials/_nav.scss */
-ul.navbar-nav > li {
-  background-color: #fff;
-}
 @media (min-width: 768px) {
   /* line 19, ../scss/partials/_nav.scss */
   ul.navbar-nav > li {
@@ -196,18 +204,10 @@ ul.navbar-nav > li {
 }
 /* line 26, ../scss/partials/_nav.scss */
 ul.navbar-nav > li > a {
-  background-color: #eee;
   border-bottom: 2px solid transparent;
-}
-@media (min-width: 768px) {
-  /* line 26, ../scss/partials/_nav.scss */
-  ul.navbar-nav > li > a {
-    background-color: transparent;
-  }
 }
 /* line 34, ../scss/partials/_nav.scss */
 ul.navbar-nav > li > a:hover, ul.navbar-nav > li > a:focus {
-  background-color: transparent;
   border-bottom-color: rgba(255, 255, 255, 0.25);
 }
 @media (min-width: 768px) {
@@ -217,18 +217,12 @@ ul.navbar-nav > li > a:hover, ul.navbar-nav > li > a:focus {
     border-bottom-color: rgba(255, 204, 0, 0.99);
   }
 }
-/* line 46, ../scss/partials/_nav.scss */
-ul.navbar-nav > li.active {
-  background-color: #ffcc00;
-}
 /* line 49, ../scss/partials/_nav.scss */
 ul.navbar-nav > li.active > a {
-  background-color: #eee;
   border-bottom: 2px solid #ffcc00;
 }
 /* line 53, ../scss/partials/_nav.scss */
 ul.navbar-nav > li.active > a:hover, ul.navbar-nav > li.active > a:focus {
-  background-color: transparent;
   border-bottom-color: rgba(255, 204, 0, 0.99);
 }
 
@@ -582,7 +576,7 @@ Fullpage JS
 /* line 134, ../scss/modules/fullpage/_base.scss */
 #fp-nav li .active span,
 .fp-slidesNav .active span {
-  background: #333;
+  background: #cc9900;
 }
 
 /* line 138, ../scss/modules/fullpage/_base.scss */
@@ -592,7 +586,7 @@ Fullpage JS
   left: 2px;
   width: 8px;
   height: 8px;
-  border: 1px solid #000;
+  border: 1px solid #333;
   background: rgba(0, 0, 0, 0);
   border-radius: 50%;
   position: absolute;
@@ -637,12 +631,12 @@ background: rgba(255,255,255,.3); //- white
 }
 /* line 18, ../scss/modules/fullpage/_section.scss */
 .fp-section:nth-child(2n) {
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.2);
   color: #fff;
   /* IE8 proofing */
   color: rgba(255, 255, 255, 0.75);
 }
-/* line 31, ../scss/modules/fullpage/_section.scss */
+/* line 30, ../scss/modules/fullpage/_section.scss */
 .fp-section .sectionsNav {
   padding: .1em;
   position: absolute;
@@ -651,50 +645,50 @@ background: rgba(255,255,255,.3); //- white
   z-index: 100;
 }
 @media (max-width: 999px) {
-  /* line 31, ../scss/modules/fullpage/_section.scss */
+  /* line 30, ../scss/modules/fullpage/_section.scss */
   .fp-section .sectionsNav {
     bottom: 3%;
     left: 47%;
   }
 }
 @media (max-width: 699px) and (orientation: landscape) {
-  /* line 31, ../scss/modules/fullpage/_section.scss */
+  /* line 30, ../scss/modules/fullpage/_section.scss */
   .fp-section .sectionsNav {
     bottom: 3%;
     left: 46%;
   }
 }
 @media (max-width: 499px) and (orientation: portrait) {
-  /* line 31, ../scss/modules/fullpage/_section.scss */
+  /* line 30, ../scss/modules/fullpage/_section.scss */
   .fp-section .sectionsNav {
     bottom: 3%;
     left: 43%;
   }
 }
-/* line 60, ../scss/modules/fullpage/_section.scss */
+/* line 55, ../scss/modules/fullpage/_section.scss */
 .fp-section .sectionsNav.go {
   text-align: center;
   text-decoration: none;
 }
-/* line 65, ../scss/modules/fullpage/_section.scss */
+/* line 60, ../scss/modules/fullpage/_section.scss */
 .fp-section .sectionsNav.go:before, .fp-section .sectionsNav#goNext:before, .fp-section .sectionsNav#goTop:before {
   display: block;
   font-size: 0.7em;
 }
-/* line 72, ../scss/modules/fullpage/_section.scss */
+/* line 67, ../scss/modules/fullpage/_section.scss */
 .fp-section .sectionsNav#goNext:before {
-  content: "Scroll for More";
+  content: "Learn More";
 }
-/* line 79, ../scss/modules/fullpage/_section.scss */
+/* line 74, ../scss/modules/fullpage/_section.scss */
 .fp-section .sectionsNav#goTop:before {
-  content: "Back to Top";
+  content: "Top";
 }
-/* line 85, ../scss/modules/fullpage/_section.scss */
+/* line 80, ../scss/modules/fullpage/_section.scss */
 .fp-section .sectionsNav .fa-chevron-down {
   font-size: 2.8em;
 }
 
-/* line 91, ../scss/modules/fullpage/_section.scss */
+/* line 86, ../scss/modules/fullpage/_section.scss */
 .fullPage-header {
   position: absolute;
   top: 0;

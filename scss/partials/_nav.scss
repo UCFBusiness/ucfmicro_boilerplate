@@ -17,22 +17,22 @@ ul.navbar-nav {
     //background: rgba(201,201,201,0.4);
     
     > li {
-        background-color: #fff;
+        //background-color: #fff;
         
         @media (min-width: 768px) {
             background-color: transparent;
         }
         
         > a {
-            background-color: #eee;
+            //background-color: #eee;
             border-bottom: 2px solid transparent;
             
             @media (min-width: 768px) {
-                background-color: transparent;
+                //background-color: transparent;
             }
             
             &:hover, &:focus {
-                background-color: transparent;
+                //background-color: transparent;
                 border-bottom-color: rgba(255,255,255,.25);
                 
                 @media (min-width: 768px) {
@@ -44,14 +44,14 @@ ul.navbar-nav {
     }
     
     > li.active {
-        background-color: #ffcc00;
+        //background-color: #ffcc00;
         
         > a {
-            background-color: #eee;
+            //background-color: #eee;
             border-bottom: 2px solid #ffcc00;
             
             &:hover, &:focus {
-                background-color: transparent;
+                //background-color: transparent;
                 border-bottom-color: rgba(255, 204, 0, .99);
             }
         }
