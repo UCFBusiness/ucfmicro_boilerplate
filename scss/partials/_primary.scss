@@ -49,6 +49,7 @@
     max-width: 300px;
 }
 
+
 /*
  * Base structure
  */
@@ -84,29 +85,27 @@
 }
 
 
-
-/*
- * Page
- */
-
-h1.head-title {
-    font-size: 4em;   
-}
-
 /*
  * Custom button
  */
 
-.btn-lg {
-    padding: 10px 20px;
-    font-weight: bold;
+.btn-center {
+    margin: 0 auto;
+    width: 92px;
 }
 
-.btn-default,
-.btn-default:hover,
-.btn-default:focus {
-    color: #777;
-    text-shadow: none; /* Prevent inheritence from `body` */
-    background-color: rgba(255,255,255,0.3);
-    border: 1px solid #777;
+.btn-center-lg {
+    margin: 0 auto;
+    width: 119px;
+}
+
+.btn-ghost {
+    background-color: transparent;
+    background-color: rgba(0,0,0,0.5);
+    border: 1px solid #fff;
+    color: #fff;
+    
+    &:hover {
+        border: 1px solid #333;
+    }
 }
